@@ -1,0 +1,63 @@
+---
+name: commit-generation
+description: Enforces lowercase commit messages with CRUD-style prefixes
+---
+
+# Overview
+
+This rule standardizes git commit messages.  
+All commit messages must be written in lowercase, except for proper names (people, products, organizations, or protocols).  
+Each commit message must begin with a CRUD-style prefix followed by a colon.
+
+## Commit Message Rules
+
+### 1. Prefix (Required)
+
+Every commit message **must start with one of the following prefixes**:
+
+- `create:` — introducing new features, files, or capabilities
+- `read:` — documentation, comments, or non-functional visibility changes
+- `update:` — modifying existing behavior, logic, or implementation
+- `delete:` — removing code, files, or functionality
+
+No other prefixes are allowed.
+
+### 2. Casing Rules
+
+- The commit message **must be entirely lowercase**
+- **Exception:** Proper names may remain capitalized  
+  Examples of allowed capitalization:
+  - MCP
+  - AI
+  - OpenAI
+  - AWS
+  - Google Cloud
+  - Personal names
+
+### 3. Style Guidelines
+
+- Use clear, concise, descriptive language
+- Do not end the message with punctuation
+- Avoid filler words such as “just”, “some”, or “stuff”
+- Focus on *what* changed and *why*, not *how*
+
+### 4. Format
+<prefix>: <concise description>
+
+### 5. Examples
+
+✅ **Valid**
+- `create: a new feature implementing MCP and AI functionalities`
+- `update: improve auth flow for Google Cloud integration`
+- `delete: remove unused AWS credentials loader`
+- `read: add documentation for OpenAI request lifecycle`
+
+❌ **Invalid**
+- `Add new feature` (missing CRUD prefix, wrong casing)
+- `CREATE: new feature` (uppercase prefix)
+- `update - improve performance` (wrong separator)
+- `fix: bug in login` (non-CRUD prefix)
+
+---
+
+Always apply this rule when generating commit messages.
