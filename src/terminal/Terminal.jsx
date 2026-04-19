@@ -11,6 +11,7 @@ import TerminalInput from './TerminalInput';
 import useTabCompletion from './useTabCompletion';
 import TypingEffect from '../effects/TypingEffect';
 import MatrixRain from '../effects/MatrixRain';
+import useDraggable from './useDraggable';
 import './Terminal.css';
 
 let lineIdCounter = 0;
@@ -26,6 +27,7 @@ export default function Terminal() {
   const theme = themes[state.currentTheme];
   const tabComplete = useTabCompletion();
   const [welcomeComplete, setWelcomeComplete] = useState(false);
+  const { terminalRef, handleMouseDown } = useDraggable();
 
   const handleCommand = useCallback(
     (rawInput) => {
@@ -91,10 +93,12 @@ export default function Terminal() {
 
   return (
     <div
-      className="terminal"
+      ref={terminalRef}
+      className="terminal terminal--draggable"
       role="application"
       aria-label="Terminal portfolio"
       onClick={handleTerminalClick}
+      onMouseDown={handleMouseDown}
       tabIndex={-1}
     >
       {state.isMatrixActive && <MatrixRain active={state.isMatrixActive} />}
