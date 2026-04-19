@@ -105,7 +105,21 @@ export default function Terminal() {
             <TypingEffect
               text={WELCOME_TEXT}
               speed={20}
-              onComplete={() => setWelcomeComplete(true)}
+              onComplete={() => {
+                dispatch({
+                  type: 'SUBMIT_COMMAND',
+                  payload: {
+                    command: '',
+                    outputLines: [{
+                      id: nextId(),
+                      type: 'system',
+                      content: WELCOME_TEXT,
+                      timestamp: Date.now(),
+                    }],
+                  },
+                });
+                setWelcomeComplete(true);
+              }}
             />
           </div>
         )}
