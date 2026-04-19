@@ -50,6 +50,12 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-    - name: Deploy to Coolify
+    - name: Deploy to Dokploy
+      env:
+        WEBHOOK_URL: ${{ secrets.DOKPLOY_WEBHOOK_URL }}
       run: |
-        curl --request GET '${{ secrets.COOLIFY_WEBHOOK }}' --header 'Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
+        curl --request POST "$WEBHOOK_URL" \
+          --header 'Content-Type: application/json' \
+          --fail \
+          --silent \
+          --show-error
