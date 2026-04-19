@@ -8,7 +8,7 @@ export default function TerminalOutput({ lines, theme, children }) {
   }, [lines]);
 
   return (
-    <div className="terminal-output" aria-live="polite">
+    <div className="terminal-output" role="log" aria-live="polite" aria-atomic="false" aria-label="Terminal output">
       {children}
       {lines.map((line) => (
         <div

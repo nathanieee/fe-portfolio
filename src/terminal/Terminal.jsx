@@ -84,8 +84,19 @@ export default function Terminal() {
     }
   }, [theme]);
 
+  const handleTerminalClick = useCallback(() => {
+    const input = document.querySelector('.terminal-input');
+    input?.focus();
+  }, []);
+
   return (
-    <div className="terminal" role="application" aria-label="Terminal portfolio">
+    <div
+      className="terminal"
+      role="application"
+      aria-label="Terminal portfolio"
+      onClick={handleTerminalClick}
+      tabIndex={-1}
+    >
       {state.isMatrixActive && <MatrixRain active={state.isMatrixActive} />}
       <TerminalHeader theme={theme} />
       <TerminalOutput lines={state.outputLines} theme={theme}>
