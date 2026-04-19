@@ -1,0 +1,63 @@
+{
+  "name": "Nathaniel",
+  "title": "Full-Stack Developer",
+  "location": "Earth",
+  "email": "hello@example.com",
+  "github": "https://github.com/nathanieee",
+  "linkedin": "https://linkedin.com/in/nathanieee",
+  "resume": "#",
+  "bio": [
+    "Full-stack developer passionate about building clean, performant, and user-friendly applications.",
+    "Experienced in React, Node.js, and modern web technologies.",
+    "Always exploring new tools and approaches to software development."
+  ],
+  "skills": {
+    "Frontend": ["React", "TypeScript", "JavaScript", "HTML5", "CSS3", "Next.js", "Tailwind CSS"],
+    "Backend": ["Node.js", "Express", "Python", "REST APIs", "GraphQL"],
+    "Tools": ["Git", "Docker", "CI/CD", "AWS", "Linux", "Vim"],
+    "Databases": ["PostgreSQL", "MongoDB", "Redis"]
+  },
+  "projects": [
+    {
+      "id": "terminal-portfolio",
+      "name": "Terminal Portfolio",
+      "description": "An interactive terminal-based portfolio website built with React. Features a CLI interface, multiple color themes, matrix rain effect, and tab completion.",
+      "tech": ["React", "CSS Custom Properties", "Canvas API", "Zero Dependencies"],
+      "link": "https://github.com/nathanieee/fe-portfolio"
+    },
+    {
+      "id": "project-alpha",
+      "name": "Project Alpha",
+      "description": "A full-stack web application with real-time features and a modern tech stack. Placeholder for your next great project.",
+      "tech": ["React", "Node.js", "PostgreSQL", "WebSocket"],
+      "link": "#"
+    },
+    {
+      "id": "project-beta",
+      "name": "Project Beta",
+      "description": "A CLI tool that automates common development workflows. Placeholder for another impressive project.",
+      "tech": ["Python", "Click", "Docker", "GitHub Actions"],
+      "link": "#"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Senior Developer",
+      "company": "Tech Corp",
+      "period": "2024 - Present",
+      "description": "Building scalable web applications and leading frontend architecture decisions."
+    },
+    {
+      "role": "Full-Stack Developer",
+      "company": "StartupXYZ",
+      "period": "2022 - 2024",
+      "description": "Developed and maintained multiple web applications using React and Node.js."
+    },
+    {
+      "role": "Junior Developer",
+      "company": "DevShop Inc",
+      "period": "2020 - 2022",
+      "description": "Started career building responsive web interfaces and REST APIs."
+    }
+  ]
+}

@@ -1,9 +1,13 @@
+import { TerminalProvider } from './context/TerminalContext';
+import Terminal from './terminal/Terminal';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <div className="grid-background"></div>
+      <TerminalProvider>
+        <Terminal />
+      </TerminalProvider>
     </div>
   );
 }
