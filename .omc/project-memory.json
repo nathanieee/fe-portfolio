@@ -1,0 +1,140 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1776814107591,
+  "projectRoot": "/Users/vince/Github/personal/fe-portfolio",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "C/C++",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "Makefile"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "react",
+        "version": "19.2.3",
+        "category": "frontend"
+      },
+      {
+        "name": "react-dom",
+        "version": "19.2.3",
+        "category": "frontend"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": "npm test",
+    "lintCommand": null,
+    "devCommand": "npm run start",
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": "ES modules",
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "public",
+      "src"
+    ],
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "build": {
+      "path": "build",
+      "purpose": "Build output",
+      "fileCount": 7,
+      "lastAccessed": 1776814107551,
+      "keyFiles": [
+        "asset-manifest.json",
+        "favicon.ico",
+        "index.html",
+        "logo192.png",
+        "logo512.png"
+      ]
+    },
+    "docker": {
+      "path": "docker",
+      "purpose": null,
+      "fileCount": 2,
+      "lastAccessed": 1776814107552,
+      "keyFiles": [
+        "dockerfile-dev",
+        "dockerfile-prod"
+      ]
+    },
+    "public": {
+      "path": "public",
+      "purpose": "Public files",
+      "fileCount": 6,
+      "lastAccessed": 1776814107568,
+      "keyFiles": [
+        "favicon.ico",
+        "index.html",
+        "logo192.png",
+        "logo512.png",
+        "manifest.json"
+      ]
+    },
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 8,
+      "lastAccessed": 1776814107568,
+      "keyFiles": [
+        "App.css",
+        "App.js",
+        "App.test.js",
+        "index.css",
+        "index.js"
+      ]
+    },
+    "build/static": {
+      "path": "build/static",
+      "purpose": "Static files",
+      "fileCount": 0,
+      "lastAccessed": 1776814107569,
+      "keyFiles": []
+    },
+    "src/config": {
+      "path": "src/config",
+      "purpose": "Configuration files",
+      "fileCount": 2,
+      "lastAccessed": 1776814107576,
+      "keyFiles": [
+        "portfolio.json",
+        "themes.json"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

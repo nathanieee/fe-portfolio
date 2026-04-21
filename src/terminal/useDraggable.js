@@ -11,17 +11,19 @@ export default function useDraggable() {
   const draggingRef = useRef(false);
   const terminalRef = useRef(null);
 
-  // Read the actual rendered position on mount so the first drag
-  // doesn't jump. This accounts for CSS centering via transform.
+  // Position the terminal in the center of the screen on mount
   useEffect(() => {
     if (terminalRef.current && positionRef.current === null) {
       const rect = terminalRef.current.getBoundingClientRect();
-      positionRef.current = { x: rect.left, y: rect.top };
-      // Replace CSS centering transform with exact pixel position
-      terminalRef.current.style.transform = `translate(${rect.left}px, ${rect.top}px)`;
-      // Remove CSS top/left centering so it doesn't interfere
+      const centerX = (window.innerWidth - rect.width) / 2;
+      const centerY = (window.innerHeight - rect.height) / 2;
+      positionRef.current = { x: centerX, y: centerY };
+      // Apply exact center position
+      terminalRef.current.style.transform = `translate(${centerX}px, ${centerY}px)`;
+      // Remove CSS positioning so it doesn't interfere
       terminalRef.current.style.top = '0';
       terminalRef.current.style.left = '0';
+      terminalRef.current.style.margin = '0';
     }
   }, []);
 
